@@ -1,0 +1,13 @@
+% https://www.programmer-books.com/wp-content/uploads/2019/10/Introducing-Erlang.pdf
+% Вариант 17
+
+cd Lab_1
+erl
+c(tasks).
+tasks:ball_volume(1). % Task_1
+
+tasks:from_to(1,10). % Task_2
+
+tasks:delta([1,3,4,3,7]). % Task_3
+
+tasks:int_to_binary(-5). % Task_4
