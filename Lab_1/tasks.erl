@@ -2,24 +2,24 @@
 
 -export([ball_volume/1 , from_to/2, delta/1, int_to_binary/1, rle_encode/1,intersect/2,is_date/3]).
 
--import(math,[pi/0]).
+-import(math,[pi/0,pow/2]).
 
-ball_volume(R) -> 4/3* pi() *R. % Task_1
+ball_volume(R) -> 4/3* pi() * pow(R,3). % Task_1
 
-from_to(N, M) when N == M -> 
-   io:format("~w~n", [M]);
-                                % Task_2
-from_to(N, M) when N < M -> 
-    io:format("~w~n", [M]),
-    from_to(N, M-1).
+from_to(N, M)->from_to(N, M,[]).      % Task_2
+from_to(N, M,List) -> 
+    if    
+        N =< M ->
+            from_to(N, M-1,[M|List]);
+        true -> List
+    end.
 
 delta([]) -> 0;
-delta(List) -> 
-    delta(List, [], 0).
+delta(List) -> delta(List, [], 0).
 delta([], List_New, Previous) ->lists:reverse(List_New); 
 delta([Head|Tail], List_New, Previous) ->          % Task_3
     NewProduct = Head-Previous,
-    io:format("~w~n", [NewProduct]),
+    %io:format("~w~n", [NewProduct]),
     delta(Tail,[NewProduct|List_New],Head).
 
 
