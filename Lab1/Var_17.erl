@@ -1,4 +1,4 @@
--module(tasks). % Вариант 17
+-module(var_17). % Вариант 17
 
 -export([ball_volume/1 , from_to/2, delta/1, int_to_binary/1, rle_encode/1,intersect/2,is_date/3]).
 

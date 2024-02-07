@@ -1,4 +1,4 @@
--module(lab2).
+-module(var_17).
 
 -export([sum_neg_squares/1]).
 -export([dropwhile/2]).

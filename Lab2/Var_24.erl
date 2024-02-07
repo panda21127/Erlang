@@ -1,4 +1,4 @@
--module(main).
+-module(var_24).
 
 -export([min_positive_number / 1]).
 -export([zipwith / 3]).
@@ -80,7 +80,7 @@ comparator(X, Y) ->
 sortBy(_, []) -> [];
 sortBy(Comparator, List) ->
     [Head | Tail] = List,
-    sortBy(Comparator, [X || X <- Tail, Comparator(X, Head) == 'less']) ++
+    sortBy(Comparator, [X || X <- Tail, (Comparator(X, Head) == 'less') or (Comparator(X, Head) == 'equal')]) ++
     [Head] ++
     sortBy(Comparator, [X || X <- Tail, Comparator(X, Head) == 'greater'])
 .

@@ -1,4 +1,4 @@
--module(main).
+-module(var_24).
 
 -export([disc/3]).
 -export([inits/1]).
