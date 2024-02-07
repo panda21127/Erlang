@@ -24,10 +24,10 @@ delta([Head|Tail], List_New, Previous) ->          % Task_3
 
 
 int_to_binary(N) when N <0 ->
-     String = binary_to_list(integer_to_binary(5,2)),
+     String = binary_to_list(integer_to_binary(N,2)),
      string:join(["-",String],"");                 % Task_4
 int_to_binary(N) when N >= 0->
-     integer_to_binary(5,2).
+     integer_to_binary(N,2).
 
 
 
