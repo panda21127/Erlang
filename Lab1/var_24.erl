@@ -1,5 +1,9 @@
 -module(var_24).
 
+%erl
+%c(var_24).
+%var_24:split([1, 2, 3, 4, 5, 6], 3).
+
 -export([disc/3]).
 -export([inits/1]).
 -export([split/2]).
